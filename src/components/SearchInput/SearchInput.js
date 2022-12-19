@@ -1,3 +1,5 @@
+import { Form } from 'react-bootstrap';
+
 function SearchInput(props) {
 
     const handleChange = (e) => {
@@ -5,7 +7,9 @@ function SearchInput(props) {
     }
 
     return (
-        <input type="text" placeholder="buscar por signo" onChange={handleChange} />
+        <div className="form-container__form-group search-container">
+            <Form.Control type="text" placeholder="buscar por signo" onChange={handleChange} />
+        </div>
     )
 }
 

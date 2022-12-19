@@ -1,0 +1,70 @@
+@use './variables';
+
+.form-container {
+    display: flex;
+
+    @media screen and (max-width: variables.$medium) {
+        flex-direction: column;
+    }
+
+    &__form-group {
+        display: flex;
+        margin-right: 20px;
+
+        @media screen and (max-width: variables.$medium) {
+            margin: 0 0 10px;
+        }
+
+        .form-select,
+        .form-control {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .2);
+            border: none;
+            height: 55px;
+        }
+
+        .form-select {
+            width: 220px;
+
+            @media screen and (max-width: variables.$medium) {
+                width: 100%;
+            }
+
+            option {
+                color: #000;
+            }
+        }
+
+        .form-label {
+            display: table;
+            margin: auto 0;
+            font-size: 16px;
+
+            @media screen and (max-width: variables.$medium) {
+                width: 100px;
+            }
+        }
+
+        &.search-container {
+            margin: 0 0 0 auto;
+            width: 300px;
+
+            @media screen and (max-width: variables.$medium) {
+                margin: 20px 0 0;
+                width: 100%;
+            }
+
+            input {
+                background-image: url(../assets/search-icon.svg);
+                background-repeat: no-repeat;
+                background-position-x: 12px;
+                background-position-y: center;
+                padding-left: 40px;
+
+                &::-webkit-input-placeholder {
+                    color: rgba(255, 255, 255, .8);
+                }
+            }
+        }
+    }
+}
